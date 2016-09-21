@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pledge.user %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @pledge.product %>
+</p>
+
+<p>
+  <strong>Reward:</strong>
+  <%= @pledge.reward %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @pledge.amount %>
+</p>
+
+<%= link_to 'Edit', edit_pledge_path(@pledge) %> |
+<%= link_to 'Back', pledges_path %>
