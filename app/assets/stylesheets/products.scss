@@ -12,7 +12,6 @@
   display: inline-block;
   width: 500px;
   margin: 20px;
-
 }
 
 .product-photo {
@@ -28,4 +27,26 @@
   display: inline-block;
   width: 50%;
   vertical-align: top;
+}
+
+/*
+SHOW PAGE
+*/
+
+.product-field {
+  width: 66%;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.product-main > img {
+  max-width: 50%;
+}
+
+.product-details {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 3;
+
 }
