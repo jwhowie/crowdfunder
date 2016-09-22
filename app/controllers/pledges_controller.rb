@@ -4,7 +4,11 @@ class PledgesController < ApplicationController
   # GET /pledges
   # GET /pledges.json
   def index
-    @pledges = Pledge.all
+    if params[:u] == 'u'
+      @pledges = Pledge.where(user_id: current_user.id)
+    else
+      @pledges = Pledge.all
+    end
   end
 
   # GET /pledges/1
