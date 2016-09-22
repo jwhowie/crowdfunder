@@ -16,3 +16,6 @@ end
 3.times do |iteration|
   User.create(name: "User ##{iteration}", email: "user#{iteration}@example.com", password_digest: "#{iteration}#{iteration}#{iteration}#{iteration}")
 end
+
+Reward.new(title: "1st reward", description: "description", amount: 100)
+Pledge.new(user_id: 1, product_id: 1, reward_id: 1, amount: 100)
