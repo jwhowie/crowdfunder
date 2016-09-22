@@ -7,6 +7,57 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+
+        <!-- logo -->
+        <section class="container headerLogo">
+            <div class="row">
+                <div class="col-md-4 text-left">
+                    <input type="button" class="btn btn-default btn-sm btHeader" value="New Campaign">
+                </div>
+                <div class="col-md-4 text-center">
+                    <h1>CrowdFunder</h1>
+                </div>
+                <div class="col-md-4 text-right">
+                    <input type="button" class="btn btn-default btn-sm btHeader" value="Log In"><input type="button" class="btn btn-default btn-sm btHeader" value="Sign Up">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Menu bootstrap -->
+        <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li class="pull-right">
+                    <form method="get" action="http://www.google.com" class="pull-right">
+                        <input type="text" name="q" class="inputSearch" size="15" maxlength="120"><input type="submit" class="inputSearch" value="search">
+                    </form>
+                </li>
+              </ul>
+            </div><!-- /.nav-collapse -->
+          </div><!-- /.container -->
+        </nav>
+
+
+  </header>
+
 
 <%= yield %>
 
