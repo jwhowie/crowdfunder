@@ -6,6 +6,13 @@
 
 }
 
+html {
+       background: url('http://cdn.wallpapersafari.com/15/29/L1BxwQ.jpg') no-repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+}
 
 header{
  width: 100%;
