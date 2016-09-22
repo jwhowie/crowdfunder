@@ -18,7 +18,16 @@ My Products
 <div>
 My Pledges
   <div id='myPledges'>
+    <% @pledges.each do |pledge| %>
+      <%  product = pledge.product %>
+        <%=render '/products/product', product:product %>
+        <div class=pledge>
+           <p> Pledge Amount $
+             <%=pledge.amount %>
+           </p>
 
+        </div>
+        <% end %>
   </div>
 </div>
 
