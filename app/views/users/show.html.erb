@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<div>
   <%= @user.name %>
-</p>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div>
+My Products
+  <div id='myProducts'>
+    <% @products.each do |product| %>
+        <%=render '/products/product', product:product %>
+
+        <% end %>
+
+  </div>
+
+</div>
+
+<div>
+My Pledges
+  <div id='myPledges'>
+
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

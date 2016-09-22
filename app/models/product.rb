@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :user
   has_many :rewards
+  has_many :pledges
 
   def get_time_remaining()
     time_in_seconds = (self.end_date - self.start_date).to_i
