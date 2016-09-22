@@ -1,39 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<div class="product-field">
+    <div class="product-main">
+      <%= image_tag @product.image_url %>
+    <div class="product-details">
+      <h3><%= @product.title %></h3>
+      <h4><%= @product.user.name %></h4>
+      <h4><%= @product.goal %></h4>
+      <h4><%= @product.get_time_remaining %></h4>
+    </div>
+  </div>
+  <div class="product-description">
+    <p>
+      <%= @product.description %>
+    </p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Goal:</strong>
-  <%= @product.goal %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @product.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @product.end_date %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @product.user %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @product.tags %>
-</p>
-
+<div class="reward-field">
+  <% @product.rewards.each do |reward|%>
+    <%= render 'rewards/reward', reward: reward%>
+  <% end %>
+</div>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
