@@ -1,6 +1,7 @@
 class PledgesController < ApplicationController
   before_action :set_pledge, only: [:show, :edit, :update, :destroy]
 
+
   # GET /pledges
   # GET /pledges.json
   def index
