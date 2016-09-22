@@ -41,6 +41,7 @@ SHOW PAGE
 
 .product-main > img {
   max-width: 50%;
+  margin-bottom: 20px;
 }
 
 .product-details {
@@ -49,4 +50,17 @@ SHOW PAGE
   vertical-align: top;
   line-height: 3;
 
+}
+
+.reward-field {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.reward-container {
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
 }
