@@ -18,8 +18,10 @@
   </div>
 </div>
 
-<div class="pledge-field">
-
+<div class="reward-field">
+  <% @product.rewards.each do |reward|%>
+    <%= render 'rewards/reward', reward: reward%>
+  <% end %>
 </div>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
