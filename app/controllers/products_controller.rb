@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    # byebug
     if params[:u] == 'u'
       @products = Product.where(user_id: current_user.id)
     else
