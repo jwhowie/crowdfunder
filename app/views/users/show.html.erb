@@ -1,12 +1,12 @@
 <div id="show">
 
 <p id="notice"><%= notice %></p>
-<div>
-  <h1><%= @user.name %></h1>
-</div>
 
 <div>
-<h1>My Products</h1>
+  <h3><%= @user.name %></h3>
+</div>
+<div>
+<h2>My Products</h2>
   <div class='myProducts'>
     <% @products.each do |product| %>
         <%=render '/products/product', product:product %>
@@ -22,7 +22,7 @@
 </div>
 
 <div>
-My Pledges
+<h2>My Pledges</h2>
   <div class='myPledges'>
     <% @pledges.each do |pledge| %>
       <%  product = pledge.product %>
