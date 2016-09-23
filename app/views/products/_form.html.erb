@@ -31,15 +31,26 @@
     <%= f.label :end_date %><br>
     <%= f.datetime_select :end_date %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
+  
   <div class="field">
     <%= f.label :tags %><br>
     <%= f.text_field :tags %>
   </div>
+    <% counter = 1 %>
+    <% @rewards.each do |reward|%>
+    <div>
+      <h1>
+        Reward Option
+        <%=counter%>
+        <% counter += 1 %>
+      </h1>
+
+      <%=render 'rewards/form', reward: reward %>
+      </div>
+    <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
