@@ -39,7 +39,21 @@
     <%= f.label :tags %><br>
     <%= f.text_field :tags %>
   </div>
+    <% counter = 1 %>
+    <% @rewards.each do |reward|%>
+    <div>
+      <h1>
+        Reward Option
+        <%=counter%>
+        <% counter += 1 %>
+      </h1>
+
+      <%=render 'rewards/form', reward: reward %>
+      </div>
+    <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
