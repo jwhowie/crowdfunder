@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div>
-  <%= @user.name %>
+  <h1><%= @user.name %></h1>
 </div>
 
 <div>
-My Products
+<h1>My Products</h1>
   <div id='myProducts'>
     <% @products.each do |product| %>
         <%=render '/products/product', product:product %>
