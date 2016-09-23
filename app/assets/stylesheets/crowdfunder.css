@@ -1,0 +1,57 @@
+,
+*::before
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+html {
+       background: url('http://cdn.wallpapersafari.com/15/29/L1BxwQ.jpg') no-repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+}
+
+header{
+ width: 100%;
+ background-color: #222222;
+}
+
+footer{
+  padding: 25px 15px;
+  background: #CCCCCC;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.headerLogo{
+    margin-bottom:40px;
+}
+
+.btHeader{
+ margin: 10px;
+}
+
+h1{
+ font-size: 40px;
+ color: #666666;
+ margin-top: 10px;
+ font-family: monospace;
+
+}
+h2{
+  font-size: 30px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.inputSearch{
+ margin-top: 12px;
+}
+
+.navbar-nav{
+ width: 100%;
+}

@@ -12,14 +12,13 @@
   display: inline-block;
   width: 500px;
   margin: 20px;
-
 }
 
 .product-photo {
   display: inline;
 }
 
-.product-photo > img {
+.product-photo img {
   max-width: 100%;
   width: 40%;
 }
@@ -28,4 +27,40 @@
   display: inline-block;
   width: 50%;
   vertical-align: top;
+}
+
+/*
+SHOW PAGE
+*/
+
+.product-field {
+  width: 66%;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.product-main > img {
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+
+.product-details {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 3;
+
+}
+
+.reward-field {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.reward-container {
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
 }

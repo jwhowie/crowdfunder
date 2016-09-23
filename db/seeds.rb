@@ -17,5 +17,10 @@ end
   User.create(name: "User ##{iteration}", email: "user#{iteration}@example.com", password_digest: "#{iteration}#{iteration}#{iteration}#{iteration}")
 end
 
-Reward.new(title: "1st reward", description: "description", amount: 100)
+#Generate reward
+
+3.times do |iteration|
+  Reward.create(title: "Tier #{iteration}", amount: (iteration * 20), description: "This is the #{iteration} reward. Youc an get some great stuff!", product_id: 1)
+end
+
 Pledge.new(user_id: 1, product_id: 1, reward_id: 1, amount: 100)

@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @products = Product.where(user_id: current_user.id)
-    puts @products
+    @pledges = Pledge.where(user_id: current_user.id)
+
   end
 
   # GET /users/new
