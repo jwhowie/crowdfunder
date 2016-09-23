@@ -1,9 +1,5 @@
 <%= form_tag new_pledge_path do |f| %>
-  <div class="hidden-fields">
-    <%= f.hidden_field :user_id %>
-    <%= f.hidden_field :product_id %>
-    <%= f.hidden_field :reward_id %>
-  </div>
+<%- form_for()
   <div class="field">
     <%= f.label :amount %><br>
     <%= f.number_field :amount %>
