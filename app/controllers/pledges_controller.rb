@@ -29,6 +29,7 @@ class PledgesController < ApplicationController
   # POST /pledges.json
   def create
     @pledge = Pledge.new(pledge_params)
+    @pledge.user_id = current_user.id
 
     respond_to do |format|
       if @pledge.save

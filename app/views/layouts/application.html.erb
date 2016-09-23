@@ -14,18 +14,13 @@
         <section class="container headerLogo">
             <div class="row">
                 <div class="col-md-4 text-left">
-                  <% if current_user %>
-
-                  <% else %>
-                    <input type="button"  onclick="location.href='products/new'; "class="btn btn-default btn-sm btHeader" value="New Product">
-                  <% end %>
                 </div>
                 <div class="col-md-4 text-center">
                     <h1><a href="/">CrowdFunder</a></h1>
                 </div>
                 <div class="col-md-4 text-right">
                   <% if current_user %>
-                    <span class="btn btn-default btn-sm btHeader"> Signed in as <%= link_to "#{current_user.name}", user_path(current_user.id) %></span> |
+                    <span class="btn btn-default btn-sm btHeader"><%= link_to "Signed in as #{current_user.name}", user_path(current_user.id) %></span> |
                     <span class="btn btn-default btn-sm btHeader"><%= link_to "Log out", session_path(current_user), :method => :delete %></span>
                     <% else %>
                     <span class="btn btn-default btn-sm btHeader"><%= link_to "Log In", new_session_path %></span> |
@@ -56,6 +51,9 @@
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/">Projects</a></li>
                 <li><a href="/">About</a></li>
+                <% if current_user %>
+                <li><a href="/products/new">New Campagin</a></li>
+                <% end %>
                 <li class="pull-right">
                     <form method="get" action="http://www.google.com" class="pull-right">
                         <input type="text" name="q" class="inputSearch" size="15" maxlength="120"><input type="submit" class="inputSearch" value="Search">
