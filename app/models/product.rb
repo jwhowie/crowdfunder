@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
   def get_time_remaining()
 
     current_time = Time.new #assigns var to current time
-    
+
     time_in_seconds = (self.end_date - current_time).to_i
 
     days_float = (time_in_seconds/86400.0)
@@ -36,7 +36,7 @@ class Product < ActiveRecord::Base
 
     percent_of_goal_int = percent_of_goal_float.to_int #converts percent_of_goal_float to an integer
 
-    return "So far, this campagin meets %#{percent_of_goal_int} of its goal!" #returns string displaying percentage of product's goal met
+    return "So far, this campagin meets #{percent_of_goal_int}% of its goal!" #returns string displaying percentage of product's goal met
     end
   end
 end
