@@ -29,6 +29,11 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @rewards = @product.rewards
+    rewards_count = @rewards.length
+    (5 - rewards_count).times do
+      @rewards << Reward.new
+    end
   end
 
   # POST /products
