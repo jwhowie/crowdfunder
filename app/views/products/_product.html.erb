@@ -1,6 +1,7 @@
 <div class="product-container">
   <div class="product-photo">
-    <%= image_tag product.image_url %>
+    <%= link_to(product) do %>
+    <%= image_tag product.image_url %><% end %>
   </div>
   <div class="product-information">
     <h3><%= product.title %></h3>
@@ -9,8 +10,10 @@
       <%= product.description %>
     </p>
     <div class="product-sub-information">
-      <h4><%= product.goal %></h4>
+
       <h4><%= product.get_time_remaining %></h4>
+      <h4><%= product.percent_pledged  %></h4>
+
     </div>
   </div>
 </div>
