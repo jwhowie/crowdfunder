@@ -36,7 +36,7 @@ class Product < ActiveRecord::Base
 
     percent_of_goal_int = percent_of_goal_float.to_int #converts percent_of_goal_float to an integer
 
-    return "So far, this campagin meets #{percent_of_goal_int}% of its goal!" #returns string displaying percentage of product's goal met
+    return "So far, this campaign meets #{percent_of_goal_int}% of its goal!" #returns string displaying percentage of product's goal met
     end
   end
 end
