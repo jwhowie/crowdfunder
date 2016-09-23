@@ -1,3 +1,5 @@
+<div id="show">
+
 <p id="notice"><%= notice %></p>
 <div>
   <h1><%= @user.name %></h1>
@@ -5,7 +7,7 @@
 
 <div>
 <h1>My Products</h1>
-  <div id='myProducts'>
+  <div class='myProducts'>
     <% @products.each do |product| %>
         <%=render '/products/product', product:product %>
         <%= button_to "Edit", edit_product_path(:id => product.id), :method => :get  %>
@@ -21,7 +23,7 @@
 
 <div>
 My Pledges
-  <div id='myPledges'>
+  <div class='myPledges'>
     <% @pledges.each do |pledge| %>
       <%  product = pledge.product %>
         <%=render '/products/product', product:product %>
@@ -33,4 +35,5 @@ My Pledges
         </div>
         <% end %>
   </div>
+</div>
 </div>
