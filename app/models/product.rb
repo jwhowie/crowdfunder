@@ -4,7 +4,10 @@ class Product < ActiveRecord::Base
   has_many :pledges
 
   def get_time_remaining()
-    time_in_seconds = (self.end_date - self.start_date).to_i
+
+    current_time = Time.new #assigns var to current time
+    
+    time_in_seconds = (self.end_date - current_time).to_i
 
     days_float = (time_in_seconds/86400.0)
     days_truncated = days_float.truncate
